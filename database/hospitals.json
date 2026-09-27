@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name": "City General Hospital",
+        "location": "Guntur",
+        "departments": [
+            "Emergency",
+            "Cardiology",
+            "General Medicine"
+        ],
+        "emergency": true
+    },
+    {
+        "id": 2,
+        "name": "Sunrise Multispeciality Hospital",
+        "location": "Guntur",
+        "departments": [
+            "Emergency",
+            "Neurology",
+            "Orthopedics"
+        ],
+        "emergency": true
+    },
+    {
+        "id": 3,
+        "name": "Care Health Hospital",
+        "location": "Guntur",
+        "departments": [
+            "General Medicine",
+            "Pediatrics",
+            "Dermatology"
+        ],
+        "emergency": false
+    },
+    {
+        "id": 4,
+        "name": "LifeCare Hospital",
+        "location": "Guntur",
+        "departments": [
+            "Cardiology",
+            "Neurology",
+            "General Medicine"
+        ],
+        "emergency": false
+    }
+]

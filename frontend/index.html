@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareNav AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚑 CareNav AI</h1>
+
+        <p class="subtitle">
+            AI Health Assistant & Hospital Navigation
+        </p>
+
+        <!-- Symptom Analysis -->
+
+        <div class="card">
+
+            <h2>🩺 How are you feeling?</h2>
+
+            <textarea
+                id="symptoms"
+                placeholder="Example: I have fever and headache">
+            </textarea>
+
+            <div class="buttons">
+
+                <button onclick="startVoiceInput()">
+                    🎤 Speak Symptoms
+                </button>
+
+                <button onclick="analyzeSymptoms()">
+                    🔍 Analyze Symptoms
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+            <h3>🏥 Recommended Hospitals</h3>
+
+            <div id="recommendedHospitalList"></div>
+
+        </div>
+
+
+        <!-- Hospital Search -->
+
+        <div class="card">
+
+            <h2>🏥 Find a Hospital</h2>
+
+            <input
+                type="text"
+                id="hospitalSearch"
+                placeholder="Search hospital or department...">
+
+            <div class="buttons">
+
+                <button onclick="loadHospitals()">
+                    🔎 Find Hospitals
+                </button>
+
+                <button onclick="loadEmergencyHospitals()">
+                    🚨 Emergency Hospitals
+                </button>
+
+            </div>
+
+            <div id="hospitalList"></div>
+
+        </div>
+
+
+        <!-- Ambulance -->
+
+        <div class="card">
+
+            <h2>🚑 Emergency Ambulance</h2>
+
+            <button onclick="showAmbulanceBooking()">
+                🚑 Request Ambulance
+            </button>
+
+            <div id="ambulanceBooking" style="display:none;">
+
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Patient Name">
+
+                <input
+                    type="tel"
+                    id="patientPhone"
+                    placeholder="Phone Number">
+
+                <input
+                    type="text"
+                    id="pickupLocation"
+                    placeholder="Pickup Location">
+
+                <select id="emergencyType">
+
+                    <option value="">
+                        Select Emergency Type
+                    </option>
+
+                    <option value="Accident">
+                        🚨 Accident
+                    </option>
+
+                    <option value="Heart Emergency">
+                        ❤️ Heart Emergency
+                    </option>
+
+                    <option value="Breathing Problem">
+                        🫁 Breathing Problem
+                    </option>
+
+                    <option value="Severe Injury">
+                        🩹 Severe Injury
+                    </option>
+
+                    <option value="Other">
+                        ⚠️ Other
+                    </option>
+
+                </select>
+
+                <input
+                    type="text"
+                    id="destinationHospital"
+                    placeholder="Destination Hospital">
+
+                <button onclick="requestAmbulance()">
+                    🚑 Confirm Ambulance Request
+                </button>
+
+                <div id="ambulanceResult"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="notice">
+
+            ⚠️ <strong>Medical Disclaimer:</strong>
+
+            CareNav AI provides preliminary health guidance
+            and is not a replacement for a qualified medical professional.
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
